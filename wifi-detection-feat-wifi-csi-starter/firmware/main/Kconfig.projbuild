@@ -1,0 +1,12 @@
+menu "Wi-Fi CSI capture"
+config PRESENCE_SSID
+    string "2.4 GHz Wi-Fi SSID"
+    default ""
+config PRESENCE_PASSWORD
+    string "Wi-Fi password (stored locally in sdkconfig; do not commit)"
+    default ""
+config PRESENCE_UDP_PORT
+    int "UDP traffic sink port"
+    range 1024 65535
+    default 5005
+endmenu
