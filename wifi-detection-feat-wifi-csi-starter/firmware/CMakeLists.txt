@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+include($ENV{IDF_PATH}/tools/cmake/project.cmake)
+project(wifi_presence)
+if(NOT IDF_TARGET STREQUAL "esp32")
+    message(FATAL_ERROR "Initial CSI implementation targets the original ESP32. Verify CSI APIs before porting to another target.")
+endif()
